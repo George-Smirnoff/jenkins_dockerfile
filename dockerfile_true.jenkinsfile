@@ -5,9 +5,9 @@ pipeline{
     }
     stages{
         stage("A"){
-            agent any/* {
+            agent {
                 label "master"
-            } */
+            }
             steps{
                 checkout([$class: 'GitSCM',
                 branches:[[name: "origin/master"]],
@@ -20,6 +20,7 @@ pipeline{
         stage("B"){
             agent {
                 dockerfile true
+                label "master"
             }
             steps {
                 sh "cat /etc/lsb-release"
