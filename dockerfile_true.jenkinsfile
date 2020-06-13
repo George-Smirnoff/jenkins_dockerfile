@@ -17,5 +17,12 @@ pipeline{
                 ])
             }
         }
+        stage("B")
+        agent {
+            dockerfile true
+        }
+        steps {
+            sh "cat /etc/lsb-release"
+        }
     }
 }
