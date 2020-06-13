@@ -5,9 +5,9 @@ pipeline{
     }
     stages{
         stage("A"){
-            agent {
+            agent any/* {
                 label "master"
-            }
+            } */
             steps{
                 checkout([$class: 'GitSCM',
                 branches:[[name: "origin/master"]],
