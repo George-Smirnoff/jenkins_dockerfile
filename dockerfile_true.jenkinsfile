@@ -24,7 +24,7 @@ pipeline{
                 }
             }
             steps {
-                sh "cat /etc/lsb-release"
+                sh "ps aux"
             }
         }    
     }
