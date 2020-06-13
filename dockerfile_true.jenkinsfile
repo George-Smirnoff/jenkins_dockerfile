@@ -1,13 +1,12 @@
 pipeline{
-    agent none
+    agent {
+        label "master"
+    }
     options { 
         timestamps ()
     }
     stages{
         stage("A"){
-            agent {
-                label "master"
-            }
             steps{
                 checkout([$class: 'GitSCM',
                 branches:[[name: "origin/master"]],
