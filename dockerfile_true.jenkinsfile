@@ -23,7 +23,6 @@ pipeline{
                     label "master"
                     filename "nginx.dockerfile"
                 }
-                label "master"
             }
             steps {
                 sh "cat /etc/lsb-release"
