@@ -18,10 +18,7 @@ pipeline{
         }
         stage("B"){
             agent {
-                dockerfile {
-                    label "master"
-                    filename "nginx.dockerfile"
-                }
+                dockerfile true
             }
             steps {
                 sh "ps aux"
