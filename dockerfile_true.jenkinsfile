@@ -21,7 +21,10 @@ pipeline{
                 dockerfile true
             }
             steps {
-                sh "ps aux"
+                sh '''
+                date
+                hostname
+                '''
             }
         }    
     }
